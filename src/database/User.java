@@ -1,5 +1,5 @@
 package database;
-
+import java.util.*;
 public class User {
 	
 	private String UserName;
@@ -8,6 +8,7 @@ public class User {
 	private float balance;
 	private  static int Id=0;
 	private int SpecialId;
+	private Vector<Transaction> transactions;// arrayof transcations
 	public String getUserName() {
 		return UserName;
 	}
@@ -20,7 +21,7 @@ public class User {
 	public void setEmail(String email) {
 		Email = email;
 	}
-	public string getPassword() {
+	public String getPassword() {
 		return Password;
 	}
 	public void setPassword(String password) {
@@ -42,7 +43,12 @@ public class User {
 		this.balance = balance;
 		SpecialId=Id;
 		Id+=1;
+		transactions=new Vector <>();
 		
+	}
+	public int addTransaction(Transaction t)
+	{
+		transactions.add(t);
 	}
 	
 }
