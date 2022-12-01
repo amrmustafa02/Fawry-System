@@ -20,7 +20,7 @@ public class User {
 	public void setEmail(String email) {
 		Email = email;
 	}
-	public string getPassword() {
+	public String getPassword() {
 		return Password;
 	}
 	public void setPassword(String password) {
