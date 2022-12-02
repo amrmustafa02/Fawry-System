@@ -4,5 +4,4 @@ public interface ICommend {
 
 	public void draw();
 		
-	
 }

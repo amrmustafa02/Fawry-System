@@ -10,7 +10,7 @@ public class EnterUserCommend implements ICommend {
 		Scanner sc = new Scanner(System.in);
 		int ch;
 		Invoker invoker = new Invoker();
-		
+
 		while (true) {
 			System.out.println("\n\n---------------");
 			System.out.println("|1- Sign In   |");
@@ -22,18 +22,18 @@ public class EnterUserCommend implements ICommend {
 			try {
 				ch = sc.nextInt();
 				if (ch == 1) {
-					invoker.execute(new EnterUserCommend());
+					invoker.execute(new SignInCommend());
 				} else if (ch == 2) {
-					invoker.execute(new EnterUserCommend());
+					invoker.execute(new SignUpCommend());
 				} else if (ch == 3) {
-					sc.close();
-					return;
+					break;
 				}
 			} catch (Exception e) {
 
 			}
 
 		}
+		sc.close();
 	}
 
 }
