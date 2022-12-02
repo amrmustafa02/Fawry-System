@@ -8,7 +8,7 @@ public class User {
 	private float balance;
 	private  static int Id=0;
 	private int SpecialId;
-	private Vector<Transaction> transactions;// arrayof transcations
+	private Vector<Transaction> transactions;// array of transactions
 	public String getUserName() {
 		return UserName;
 	}
@@ -46,7 +46,7 @@ public class User {
 		transactions=new Vector <>();
 		
 	}
-	public int addTransaction(Transaction t)
+	public void addTransaction(Transaction t)
 	{
 		transactions.add(t);
 	}
