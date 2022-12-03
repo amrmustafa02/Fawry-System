@@ -11,6 +11,7 @@ public class DataBase {
 	private HashMap<String, Service> services = new HashMap<String, Service>();
 	private static HashMap<String, Integer> discounts = new HashMap<String, Integer>();
 	private int overAllDiscounts;
+	private User currentUser = null;
 
 	public static DataBase getInstance() {
 
@@ -54,4 +55,11 @@ public class DataBase {
 		this.overAllDiscounts = overAllDiscounts;
 	}
 
+	public void setCurrentUser(User user) {
+		this.currentUser = user;
+	}
+
+	public User getCurrentUser() {
+		return this.currentUser;
+	}
 }

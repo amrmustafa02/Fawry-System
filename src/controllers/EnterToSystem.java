@@ -31,8 +31,10 @@ public class EnterToSystem {
 		// check on user
 		for (int i = 0; i < users.size(); i++) {
 			if (email.equals(users.get(i).getEmail())) {
-				if (password.equals(users.get(i).getPassword()))
+				if (password.equals(users.get(i).getPassword())) {
+					db.setCurrentUser(users.get(i));
 					return true;
+				}
 			}
 		}
 		return false;

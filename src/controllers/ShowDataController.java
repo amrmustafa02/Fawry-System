@@ -2,10 +2,8 @@ package controllers;
 
 import database.DataBase;
 
-public class SerachController {
+public class ShowDataController {
 	private DataBase db = DataBase.getInstance();
+	
 
-	public void search(String service) {
-
-	}
 }

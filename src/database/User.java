@@ -40,8 +40,8 @@ public class User {
 		return balance;
 	}
 
-	public void setBalance(float balance) {
-		this.balance = balance;
+	public void addToWallet(float balance) {
+		this.balance +=balance;
 	}
 
 	public int getId() {

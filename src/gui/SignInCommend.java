@@ -24,6 +24,9 @@ public class SignInCommend implements ICommend {
 
 			if (check == true) {
 				System.out.print("user is exsit");
+				Invoker in = new Invoker();
+			
+				in.execute(new UserMenuCommend());
 
 			} else {
 				System.out.print("user not found");
