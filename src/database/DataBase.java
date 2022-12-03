@@ -7,59 +7,69 @@ import java.util.Vector;
 // use singleton  
 public class DataBase {
 	private static DataBase instance = null;
-	private Vector<User> users = new Vector<>();
-	private HashMap<String, Service> services = new HashMap<String, Service>();
-	private static HashMap<String, Integer> discounts = new HashMap<String, Integer>();
-	private int overAllDiscounts;
-	private User currentUser = null;
+    private Vector<User> users = new Vector<>();
+    private HashMap<String, Service> services = new HashMap<String, Service>();
+    private static HashMap<String, Integer> discounts = new HashMap<String, Integer>();
+    private HashMap<Transaction, String> refundTransactions = new HashMap<Transaction, String>();
 
-	public static DataBase getInstance() {
+    private int overAllDiscounts;
+    private User currentUser = null;
 
-		if (instance == null) {
-			instance = new DataBase();
-			discounts.put("Mobile recharge", 0);
-			discounts.put("internet recharge", 0);
-			discounts.put("Landline", 0);
-			discounts.put("Donations ", 0);
+    public static DataBase getInstance() {
 
-		}
+        if (instance == null) {
+            instance = new DataBase();
+            discounts.put("Mobile recharge", 0);
+            discounts.put("internet recharge", 0);
+            discounts.put("Landline", 0);
+            discounts.put("Donations ", 0);
 
-		return instance;
-	}
+        }
 
-	public Vector<User> getUsers() {
-		return users;
-	}
+        return instance;
+    }
 
-	public void addUser(String userName, String email, String password) {
-		users.add(new User(userName, email, password));
-	}
+    public Vector<User> getUsers() {
+        return users;
+    }
 
-	public HashMap<String, Service> getServices() {
-		return services;
-	}
+    public void addUser(String userName, String email, String password) {
+        users.add(new User(userName, email, password));
+    }
 
-	public Integer getDiscount(String service) {
-		return discounts.get(service);
-	}
+    public HashMap<String, Service> getServices() {
+        return services;
+    }
 
-	public void addDiscounts(String service, Integer discount) {
-		discounts.replace(service, discount);
-	}
+    public Integer getDiscount(String service) {
+        return discounts.get(service);
+    }
 
-	public int getOverAllDiscounts() {
-		return overAllDiscounts;
-	}
+    public void addDiscounts(String service, Integer discount) {
+        discounts.replace(service, discount);
+    }
 
-	public void setOverAllDiscounts(int overAllDiscounts) {
-		this.overAllDiscounts = overAllDiscounts;
-	}
+    public int getOverAllDiscounts() {
+        return overAllDiscounts;
+    }
 
-	public void setCurrentUser(User user) {
-		this.currentUser = user;
-	}
+    public void setOverAllDiscounts(int overAllDiscounts) {
+        this.overAllDiscounts = overAllDiscounts;
+    }
 
-	public User getCurrentUser() {
-		return this.currentUser;
-	}
+    public void setCurrentUser(User user) {
+        this.currentUser = user;
+    }
+
+    public User getCurrentUser() {
+        return this.currentUser;
+    }
+
+    public void addRefundRequest(Transaction t) {
+        refundTransactions.put(t, "waiting");
+    }
+
+    public HashMap<Transaction, String>  getTransaction( ) {
+        return this.refundTransactions;
+    }
 }
