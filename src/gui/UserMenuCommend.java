@@ -2,18 +2,18 @@ package gui;
 
 import java.util.Scanner;
 
-import controllers.SerachController;
+import controllers.UserMenuController;
 import database.DataBase;
 
 public class UserMenuCommend implements ICommend {
 
 	private Scanner sc = new Scanner(System.in);
-	private SerachController ctrl = new SerachController();
+	private UserMenuController ctrl = new UserMenuController();
 	private DataBase db = DataBase.getInstance();
-	int ch;
 
 	@Override
 	public void draw() {
+		int ch;
 		while (true) {
 			System.out.println("\n\n1- Search");
 			System.out.println("2- show my transaction");
@@ -30,7 +30,6 @@ public class UserMenuCommend implements ICommend {
 					// take string matching
 					String name = sc.nextLine();
 					// search
-					ctrl.search(name);
 
 				} else if (ch == 2) {
 
@@ -40,7 +39,7 @@ public class UserMenuCommend implements ICommend {
 
 				} else if (ch == 5) {
 
-					System.out.println("Enter amount: ");
+					System.out.println("Enter amount(put 0 if not you want add any amount) : ");
 
 					float amount = sc.nextFloat();
 					db.getCurrentUser().addToWallet(amount);

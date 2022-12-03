@@ -41,7 +41,7 @@ public class User {
 	}
 
 	public void addToWallet(float balance) {
-		this.balance +=balance;
+		this.balance += balance;
 	}
 
 	public int getId() {
@@ -59,6 +59,10 @@ public class User {
 
 	public void addTransaction(Transaction t) {
 		transactions.add(t);
+	}
+
+	public Vector<Transaction> getTransaction() {
+		return transactions;
 	}
 
 }

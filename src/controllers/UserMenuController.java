@@ -1,11 +1,13 @@
 package controllers;
 
-import database.DataBase;
+import java.util.Vector;
 
-public class SerachController {
+import database.DataBase;
+import database.Transaction;
+
+public class UserMenuController {
 	private DataBase db = DataBase.getInstance();
 
-	public void search(String service) {
 
-	}
+
 }
