@@ -16,12 +16,12 @@ public class UserMenuCommend implements ICommend {
 		int ch;
 		while (true) {
 			System.out.println("\n\n1- Search");
-			System.out.println("2- show my transaction");
 			System.out.println("3- show my refund requests");
 			System.out.println("4- request refund");
 			System.out.println("5- add to wallet");
 			System.out.println("6- show services ");
-			System.out.println("7- Log out\n");
+			System.out.println("7- show discounts ");
+			System.out.println("8- Log out\n");
 			System.out.print("Enter your choice: ");
 			try {
 				ch = sc.nextInt();
@@ -38,17 +38,16 @@ public class UserMenuCommend implements ICommend {
 				} else if (ch == 4) {
 
 				} else if (ch == 5) {
-
 					System.out.println("Enter amount(put 0 if not you want add any amount) : ");
-
 					float amount = sc.nextFloat();
-					db.getCurrentUser().addToWallet(amount);
-
-					System.out.println("\nwallet: " + db.getCurrentUser().getBalance() + "\n");
+					System.out.println("\nwallet: " + ctrl.addToWallet(amount) + "\n");
 
 				} else if (ch == 6) {
 
 				} else if (ch == 7) {
+
+				} else if (ch == 8) {
+					
 					break;
 				}
 

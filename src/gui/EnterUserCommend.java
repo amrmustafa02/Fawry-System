@@ -26,14 +26,14 @@ public class EnterUserCommend implements ICommend {
 				} else if (ch == 2) {
 					invoker.execute(new SignUpCommend());
 				} else if (ch == 3) {
-					break;
+					
+					return;
 				}
 			} catch (Exception e) {
 
 			}
 
 		}
-		sc.close();
 	}
 
 }

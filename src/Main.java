@@ -22,12 +22,11 @@ public class Main {
 			try {
 				choice = sc.nextInt();
 				if (choice == 1) {
-                       invoker.execute(new EnterUserCommend());
+					invoker.execute(new EnterUserCommend());
 				} else if (choice == 2) {
-                    invoker.execute(new EnterUserCommend());
-
+					invoker.execute(new EnterUserCommend());
 				} else if (choice == 3) {
-              break;
+					break;
 				}
 
 			} catch (Exception e) {
@@ -35,8 +34,7 @@ public class Main {
 			}
 
 		}
-		sc.close();
-
+		
 	}
 
 }
