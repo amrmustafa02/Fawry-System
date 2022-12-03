@@ -1,54 +1,64 @@
 package database;
+
 import java.util.*;
+
 public class User {
-	
+
 	private String UserName;
 	private String Email;
 	private String Password;
 	private float balance;
-	private  static int Id=0;
+	private static int ID = 1;
 	private int SpecialId;
-	private Vector<Transaction> transactions;// arrayof transcations
+	private Vector<Transaction> transactions;// array of transactions
+
 	public String getUserName() {
 		return UserName;
 	}
+
 	public void setUserName(String userName) {
 		UserName = userName;
 	}
+
 	public String getEmail() {
 		return Email;
 	}
+
 	public void setEmail(String email) {
 		Email = email;
 	}
+
 	public String getPassword() {
 		return Password;
 	}
+
 	public void setPassword(String password) {
 		Password = password;
 	}
+
 	public float getBalance() {
 		return balance;
 	}
+
 	public void setBalance(float balance) {
 		this.balance = balance;
 	}
+
 	public int getId() {
 		return SpecialId;
 	}
-	public User(String userName, String email, String password, float balance) {
+
+	public User(String userName, String email, String password) {
 		UserName = userName;
 		Email = email;
 		Password = password;
-		this.balance = balance;
-		SpecialId=Id;
-		Id+=1;
-		transactions=new Vector <>();
-		
+		SpecialId = ID;
+		transactions = new Vector<>();
+		ID++;
 	}
-	public int addTransaction(Transaction t)
-	{
+
+	public void addTransaction(Transaction t) {
 		transactions.add(t);
 	}
-	
+
 }
