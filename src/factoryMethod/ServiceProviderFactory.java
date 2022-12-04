@@ -2,5 +2,5 @@ package factoryMethod;
 
 interface ServiceProviderFactory {
 
-	Service createService(int type);
+	MobileService createService(int type);
 }
