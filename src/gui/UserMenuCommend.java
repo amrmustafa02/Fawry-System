@@ -33,7 +33,16 @@ public class UserMenuCommend implements ICommend {
 					// search
 
 				} else if (ch == 2) {
+					HashMap<Transaction, String> refundUser = ctrl.getRefundRequest();
 
+                    System.out.println(
+                            "-------------------------------------------------------------------------------------");
+                    int i = 1;
+                    for (Transaction t : refundUser.keySet()) {
+                        System.out.println(i + "refund has id: " + t.getTid() + " its status: " + refundUser.get(t));
+                    }
+                    System.out.println(
+                            "-------------------------------------------------------------------------------------");
 				} else if (ch == 3) {
 
 				} else if (ch == 4) {
