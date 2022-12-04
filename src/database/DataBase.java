@@ -69,7 +69,10 @@ public class DataBase {
 		refundTransactions.put(id, "waiting");
 	}
 
-	public HashMap<Integer, String> getTransaction() {
+	public HashMap<Integer, String> getRefundTransaction() {
 		return this.refundTransactions;
 	}
+	public void changeStateOfRefundRequset(Integer id, String state) {
+        refundTransactions.replace(id, state);
+    }
 }
