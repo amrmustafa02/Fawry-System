@@ -32,5 +32,9 @@ public class UserMenuController {
         return userRefundsRequest;
 
     }
+    public void addRefundRequest(Integer id) {
+        db.addRefundRequest(id);
+    }
 
 }
+  
