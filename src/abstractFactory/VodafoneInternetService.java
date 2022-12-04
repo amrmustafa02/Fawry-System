@@ -1,9 +1,11 @@
 package abstractFactory;
 
+import database.Transaction;
+
 public class VodafoneInternetService implements InternetService {
 
 	@Override
-	public void createInternetService() {
+	public void createInternetService(Transaction T) {
 		// TODO Auto-generated method stub
 
 	}
