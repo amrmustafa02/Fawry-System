@@ -1,6 +1,6 @@
-package factoryMethod;
+package abstractFactory;
 
-public class VodafoneInternetService implements InternetService {
+public class OrangeInternetService implements InternetService {
 
 	@Override
 	public void createInternetService() {
