@@ -44,6 +44,16 @@ public class UserMenuCommend implements ICommend {
                     System.out.println(
                             "-------------------------------------------------------------------------------------");
 				} else if (ch == 3) {
+					int tid;
+                    try {
+
+                        System.out.print("Enter id of transaction: ");
+                        tid = sc.nextInt();
+                        ctrl.addRefundRequest(tid);
+
+                    } catch (Exception e) {
+                        System.out.println("Error");
+                    }
 
 				} else if (ch == 4) {
 
