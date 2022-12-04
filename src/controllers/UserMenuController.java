@@ -13,28 +13,30 @@ public class UserMenuController {
 		db.getCurrentUser().addToWallet(amount);
 		return db.getCurrentUser().getBalance();
 	}
-	public HashMap<String, Integer> getDiscounts ( ) {
+
+	public HashMap<String, Integer> getDiscounts() {
 		return db.getDiscount();
 	}
+
 	public HashMap<Transaction, String> getRefundRequest() {
-        HashMap<Transaction, String> userRefundsRequest = new HashMap<>();
+		HashMap<Transaction, String> userRefundsRequest = new HashMap<>();
 
-        Vector<Transaction> userTransaction = db.getCurrentUser().getTransaction();
-        HashMap<Integer, String> refundRequest = db.getRefundTransaction();
+		Vector<Transaction> userTransaction = db.getCurrentUser().getTransaction();
+		HashMap<Integer, String> refundRequest = db.getRefundTransaction();
 
-        for (Transaction t : userTransaction) {
-            Integer getId = t.getTid();
+		for (Transaction t : userTransaction) {
+			Integer getId = t.getTid();
 
-            if (refundRequest.containsKey(getId) == true) {
-                userRefundsRequest.put(t, refundRequest.get(getId));
-            }
-        }
-        return userRefundsRequest;
+			if (refundRequest.containsKey(getId) == true) {
+				userRefundsRequest.put(t, refundRequest.get(getId));
+			}
+		}
+		return userRefundsRequest;
 
-    }
-    public void addRefundRequest(Integer id) {
-        db.addRefundRequest(id);
-    }
+	}
+
+	public void addRefundRequest(Integer id) {
+		db.addRefundRequest(id);
+	}
 
 }
-  

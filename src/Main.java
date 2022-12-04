@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+import gui.EnterAdminCommend;
 import gui.EnterUserCommend;
 import gui.Invoker;
 
@@ -24,7 +25,7 @@ public class Main {
 				if (choice == 1) {
 					invoker.execute(new EnterUserCommend());
 				} else if (choice == 2) {
-					invoker.execute(new EnterUserCommend());
+					invoker.execute(new EnterAdminCommend());
 				} else if (choice == 3) {
 					break;
 				}

@@ -19,8 +19,8 @@ public class DataBase {
 
 		if (instance == null) {
 			instance = new DataBase();
-			discounts.put("Mobile recharge", 10);
 			discounts.put("internet recharge", 0);
+			discounts.put("Mobile recharge", 0);
 			discounts.put("Landline", 0);
 			discounts.put("Donations ", 0);
 
@@ -45,7 +45,7 @@ public class DataBase {
 		return discounts;
 	}
 
-	public void addDiscounts(String service, Integer discount) {
+	public void addDiscount(String service, Integer discount) {
 		discounts.replace(service, discount);
 	}
 
@@ -72,7 +72,8 @@ public class DataBase {
 	public HashMap<Integer, String> getRefundTransaction() {
 		return this.refundTransactions;
 	}
+
 	public void changeStateOfRefundRequset(Integer id, String state) {
-        refundTransactions.replace(id, state);
-    }
+		refundTransactions.replace(id, state);
+	}
 }

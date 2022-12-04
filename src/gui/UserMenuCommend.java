@@ -36,25 +36,25 @@ public class UserMenuCommend implements ICommend {
 				} else if (ch == 2) {
 					HashMap<Transaction, String> refundUser = ctrl.getRefundRequest();
 
-                    System.out.println(
-                            "-------------------------------------------------------------------------------------");
-                    int i = 1;
-                    for (Transaction t : refundUser.keySet()) {
-                        System.out.println(i + "refund has id: " + t.getTid() + " its status: " + refundUser.get(t));
-                    }
-                    System.out.println(
-                            "-------------------------------------------------------------------------------------");
+					System.out.println(
+							"-------------------------------------------------------------------------------------");
+					int i = 1;
+					for (Transaction t : refundUser.keySet()) {
+						System.out.println(i + "refund has id: " + t.getTid() + " its status: " + refundUser.get(t));
+					}
+					System.out.println(
+							"-------------------------------------------------------------------------------------");
 				} else if (ch == 3) {
 					int tid;
-                    try {
+					try {
 
-                        System.out.print("Enter id of transaction: ");
-                        tid = sc.nextInt();
-                        ctrl.addRefundRequest(tid);
+						System.out.print("Enter id of transaction: ");
+						tid = sc.nextInt();
+						ctrl.addRefundRequest(tid);
 
-                    } catch (Exception e) {
-                        System.out.println("Error");
-                    }
+					} catch (Exception e) {
+						System.out.println("Error");
+					}
 
 				} else if (ch == 4) {
 
