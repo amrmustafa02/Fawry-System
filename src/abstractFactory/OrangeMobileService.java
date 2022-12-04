@@ -19,11 +19,15 @@ public class OrangeMobileService implements MobileService {
 
 		Vector<Integer> options = new Vector<Integer>();
 		options.add(10);
+		options.add(15);
 		options.add(20);
+		options.add(25);
+		options.add(30);
+		options.add(35);
+		options.add(40);
 		options.add(50);
-		options.add(70);
+		options.add(75);
 		options.add(100);
-		options.add(150);
 
 		for (int i = 0; i < options.size(); i++)
 			System.out.println((i + 1) + "- orange internet " + options.get(i));
