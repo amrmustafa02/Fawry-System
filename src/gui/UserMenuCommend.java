@@ -1,5 +1,6 @@
 package gui;
 
+import java.util.HashMap;
 import java.util.Scanner;
 
 import controllers.UserMenuController;
@@ -45,9 +46,16 @@ public class UserMenuCommend implements ICommend {
 				} else if (ch == 6) {
 
 				} else if (ch == 7) {
+					HashMap<String, Integer> discounts = ctrl.getDiscounts();
 
+					int i = 1;
+					for (String name : discounts.keySet()) {
+						if (discounts.get(name) != 0) {
+							System.out.println(i + "- " + name + " = " + discounts.get(name));
+							i++;
+						}
+					}
 				} else if (ch == 8) {
-					
 					break;
 				}
 
