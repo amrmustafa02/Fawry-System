@@ -16,24 +16,12 @@ public class User {
 		return UserName;
 	}
 
-	public void setUserName(String userName) {
-		UserName = userName;
-	}
-
 	public String getEmail() {
 		return Email;
 	}
 
-	public void setEmail(String email) {
-		Email = email;
-	}
-
 	public String getPassword() {
 		return Password;
-	}
-
-	public void setPassword(String password) {
-		Password = password;
 	}
 
 	public float getBalance() {
@@ -63,6 +51,10 @@ public class User {
 
 	public Vector<Transaction> getTransaction() {
 		return transactions;
+	}
+
+	public void removeFromWalltet(int balance) {
+		this.balance -= balance;
 	}
 
 }
