@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 import controllers.UserMenuController;
 import database.DataBase;
+import database.Transaction;
 
 public class UserMenuCommend implements ICommend {
 

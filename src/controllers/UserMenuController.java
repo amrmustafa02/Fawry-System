@@ -16,7 +16,7 @@ public class UserMenuController {
 	public HashMap<String, Integer> getDiscounts ( ) {
 		return db.getDiscount();
 	}
-	public HashMap<Transaction, String> getrefundRequest() {
+	public HashMap<Transaction, String> getRefundRequest() {
         HashMap<Transaction, String> userRefundsRequest = new HashMap<>();
 
         Vector<Transaction> userTransaction = db.getCurrentUser().getTransaction();
