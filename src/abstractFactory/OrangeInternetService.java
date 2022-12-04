@@ -24,7 +24,7 @@ public class OrangeInternetService implements InternetService {
 		options.add(150);
 
 		for (int i = 0; i < options.size(); i++)
-			System.out.println(i + 1 + "- orange internet " + options.get(i));
+			System.out.println((i + 1) + "- orange internet " + options.get(i));
 
 		try {
 			System.out.print("Enter choice: ");
