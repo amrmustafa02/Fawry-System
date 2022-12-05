@@ -12,7 +12,7 @@ public class CreditCard implements IPaymentMethod {
 		System.out.print("Enter credit card: ");
 		String cardNumber = sc.next();
 		System.out
-				.print("your transaction will done by credit card " + cardNumber + " and initail value is : " + amount);
+				.println("your transaction will done by credit card " + cardNumber + " and initail value is : " + amount.getAmount());
 		return amount;
 	}
 

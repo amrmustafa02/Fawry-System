@@ -8,12 +8,14 @@ public abstract class DiscountDecorter implements IPaymentMethod {
 
 	public abstract float addDiscount(Transaction t);
 
-	public void setMethod(IPaymentMethod method) {
+	public  DiscountDecorter(IPaymentMethod method) {
 		this.method = method;
 	}
 
 	@Override
 	public Transaction Pay(Transaction amount) {
+		
+		
 		return method.Pay(amount);
 	}
 

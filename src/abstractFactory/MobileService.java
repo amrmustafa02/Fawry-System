@@ -2,7 +2,7 @@ package abstractFactory;
 
 import database.Transaction;
 
-interface MobileService {
+public interface MobileService {
 
 	void createMobileService(Transaction T);
 }

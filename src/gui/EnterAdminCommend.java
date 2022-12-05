@@ -26,7 +26,7 @@ public class EnterAdminCommend implements ICommend {
 					invoker.execute(new AdminAddDiscountComment());
 
 				} else if (ch == 2) {
-
+                 
 				} else if (ch == 3) {
 
 				} else if (ch == 4) {

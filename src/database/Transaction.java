@@ -21,9 +21,8 @@ public class Transaction {
 	public int getTid() {
 		return Tid;
 	}
-	public Transaction(float amount, String type) {
-		Amount = amount;
-		Type = type;
+	public Transaction() {
+		
 		Tid=Id;
 		Id++;
 	}

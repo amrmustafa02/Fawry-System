@@ -4,8 +4,14 @@ import java.util.HashMap;
 
 import database.DataBase;
 import database.Transaction;
+import payment.IPaymentMethod;
 
 public class SpecificDiscount extends DiscountDecorter {
+
+	public SpecificDiscount(IPaymentMethod method) {
+		super(method);
+
+	}
 
 	@Override
 	public float addDiscount(Transaction t) {
@@ -24,7 +30,8 @@ public class SpecificDiscount extends DiscountDecorter {
 	public Transaction Pay(Transaction amount) {
 		float newAmount = addDiscount(amount);
 		amount.setAmount(newAmount);
-		return super.Pay(amount);
+		System.out.println("apply Specific Discount");
+		return amount;
 	}
 
 }

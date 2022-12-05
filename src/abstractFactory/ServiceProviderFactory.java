@@ -1,6 +1,6 @@
 package abstractFactory;
 
-interface ServiceProviderFactory {
+public interface ServiceProviderFactory {
 
 	MobileService createMobileService(int type);
 
