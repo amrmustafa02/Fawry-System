@@ -27,7 +27,7 @@ public class UserMenuCommend implements ICommend {
 	public void draw() {
 		int ch;
 		while (true) {
-			System.out.println("\n\n1- Search");
+			System.out.println("\n\n1- Search(not implements yet)");
 			System.out.println("2- show my refund requests");
 			System.out.println("3- request refund");
 			System.out.println("4- add to wallet");

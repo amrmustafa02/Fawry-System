@@ -12,12 +12,12 @@ public class EnterAdminCommend implements ICommend {
 		int ch;
 
 		while (true) {
-			System.out.println("------------------------------");
-			System.out.println("| 1- add Discound             |");
-			System.out.println("| 2- Show all refund equest   |");
-			System.out.println("| 3- Show all transaction     |");
-			System.out.println("| 4-back                      |");
-			System.out.println("-------------------------------");
+			System.out.println("-------------------------------------------------");
+			System.out.println("| 1- add Discound                                |");
+			System.out.println("| 2- Show all refund equest (not implement yet)  |");
+			System.out.println("| 3- Show all transaction (not implement yet )   |");
+			System.out.println("| 4- back                                        |");
+			System.out.println("-------------------------------------------------");
 
 			try {
 				System.out.print("Enter choice: ");
