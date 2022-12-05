@@ -58,9 +58,10 @@ public class UserMenuController {
 			break;
 		case 2:
 			factory = new EtislatFactory();
-		
+			break;
 		case 3:
 			factory = new VodafoneFactory();
+			break;
 		case 4:
 			factory = new OrangeFactory();
 			break;
@@ -77,7 +78,6 @@ public class UserMenuController {
 			t.setService("internet recharge");
 			InternetService ser = factory.createInternetService();
 			ser.createInternetService(t);
-			
 
 		} else if (service == 3) {
 			t.setService("Landline");

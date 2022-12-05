@@ -56,7 +56,7 @@ public class UserMenuCommend implements ICommend {
 							"-------------------------------------------------------------------------------------");
 					int i = 1;
 					for (Transaction t : refundUser.keySet()) {
-						System.out.println(i + "refund has id: " + t.getTid() + " its status: " + refundUser.get(t));
+						System.out.println(i + "- refund has id: " + t.getTid() + " its status: " + refundUser.get(t));
 					}
 					System.out.println(
 							"-------------------------------------------------------------------------------------");
