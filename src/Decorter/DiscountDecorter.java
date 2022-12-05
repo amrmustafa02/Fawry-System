@@ -1,8 +1,20 @@
 package Decorter;
 
 import database.Transaction;
+import payment.IPaymentMethod;
 
-public interface DiscountDecorter {
+public abstract class DiscountDecorter implements IPaymentMethod {
+	private IPaymentMethod method;
 
-	public Transaction addDiscount(Transaction t);
+	public abstract float addDiscount(Transaction t);
+
+	public void setMethod(IPaymentMethod method) {
+		this.method = method;
+	}
+
+	@Override
+	public Transaction Pay(Transaction amount) {
+		return method.Pay(amount);
+	}
+
 }

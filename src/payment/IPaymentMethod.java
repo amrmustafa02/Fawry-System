@@ -1,6 +1,8 @@
 package payment;
 
+import database.Transaction;
+
 public interface IPaymentMethod {
-	public Boolean Pay(int amount );
+	public Transaction Pay(Transaction amount );
 
 }

@@ -2,14 +2,18 @@ package payment;
 
 import java.util.Scanner;
 
+import database.Transaction;
+
 public class CreditCard implements IPaymentMethod {
 
 	@Override
-	public Boolean Pay(int amount) {
+	public Transaction Pay(Transaction amount) {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Enter credit card: ");
 		String cardNumber = sc.next();
-		return true;
+		System.out
+				.print("your transaction will done by credit card " + cardNumber + " and initail value is : " + amount);
+		return amount;
 	}
 
 }

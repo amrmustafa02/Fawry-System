@@ -3,16 +3,14 @@ package Decorter;
 import database.DataBase;
 import database.Transaction;
 
-public class OverallDiscounts implements DiscountDecorter {
+public class OverallDiscounts extends DiscountDecorter {
 
 	@Override
-	public Transaction addDiscount(Transaction t) {
-		DataBase db = DataBase.getInstance();
-		float amount = t.getAmount();
-		int dis = db.getOverAllDiscounts();
-		amount -= (amount * (dis / 100));
-		t.setAmount(amount);
-		return t;
+	public float addDiscount(Transaction t) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
+
+
 
 }

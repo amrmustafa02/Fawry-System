@@ -5,17 +5,18 @@ import database.*;
 public class Wallet implements IPaymentMethod {
 
 	@Override
-	public Boolean Pay(int amount) {
+	public Transaction Pay(Transaction t) {
 		DataBase db = DataBase.getInstance();
 		User currentUser = db.getCurrentUser();
+		float amount = t.getAmount();
 
 		if (currentUser.getBalance() >= amount) {
-			currentUser.removeFromWalltet(amount);
+			currentUser.removeFromWalltet((int) amount);
 			System.out.println("accepted transaction");
-			return true;
+			return t;
 		} else {
 			System.out.println("wallet not have money");
-			return false;
+			return t;
 		}
 
 	}

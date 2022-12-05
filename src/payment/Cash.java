@@ -1,12 +1,13 @@
 package payment;
 
+import database.Transaction;
+
 public class Cash implements IPaymentMethod {
 
 	@Override
-	public Boolean Pay(int amount) {
-		System.out.print("sucussful transaction and your amount is " + amount);
-
-		return true;
+	public Transaction Pay(Transaction amount) {
+		System.out.print("your transaction will done by cash and initail value is : " + amount);
+		return amount;
 
 	}
 
