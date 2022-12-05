@@ -3,12 +3,12 @@ package abstractFactory;
 public class EtislatFactory implements ServiceProviderFactory {
 
 	@Override
-	public MobileService createMobileService(int type) {
+	public MobileService createMobileService() {
 		return new EtislatMobileService();
 	}
 
 	@Override
-	public InternetService createInternetService(int type) {
+	public InternetService createInternetService() {
 		return new EtislatIternetService();
 	}
 

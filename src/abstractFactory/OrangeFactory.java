@@ -3,12 +3,12 @@ package abstractFactory;
 public class OrangeFactory implements ServiceProviderFactory {
 
 	@Override
-	public MobileService createMobileService(int type) {
+	public MobileService createMobileService() {
 		return new OrangeMobileService();
 	}
 
 	@Override
-	public InternetService createInternetService(int type) {
+	public InternetService createInternetService() {
 		return new OrangeInternetService();
 	}
 

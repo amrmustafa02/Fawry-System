@@ -91,9 +91,10 @@ public class UserMenuCommend implements ICommend {
 				// -----------------------------------------------------------------------
 
 				else if (ch == 5) {
-					Transaction t = new Transaction();
-					ServiceProviderFactory factory;
+
+					int c1 = 0, c2 = 0;
 					Scanner sc = new Scanner(System.in);
+
 					System.out.println("--------------------------------------");
 					System.out.println("1- mobile service");
 					System.out.println("2- Internet service");
@@ -103,48 +104,29 @@ public class UserMenuCommend implements ICommend {
 					System.out.print("Enter choice: ");
 					int cs = sc.nextInt();
 
-					if (cs == 1) {
-						System.out.println("1- WE");
+					if (cs == 1 || cs == 2) {
+						System.out.println("1- We");
 						System.out.println("2- etislat");
 						System.out.println("3- vodafone");
-						System.out.println("4- we");
+						System.out.println("4- orange");
 						System.out.print("Enter: ");
-						int cs2 = sc.nextInt();
-						if (cs2 == 1) {
-							t.setService("Mobile recharge");
-							factory = new WeFactory();
-							MobileService service = factory.createMobileService(1);
-							service.createMobileService(t);
+						c1 = sc.nextInt();
 
-						}
+					} else if (cs == 3) {
 
-					} else if (cs == 2) {
+					} else if (cs == 4) {
 
 					}
-					IPaymentMethod payment;
 
 					System.out.println("1- credit card");
 					System.out.println("2- cash");
 					System.out.println("3- wallet");
 					System.out.print("Enter: ");
-					cs = sc.nextInt();
-					if (cs == 1) {
-						payment = new CreditCard();
+					c2 = sc.nextInt();
 
-					} else if (cs == 2) {
-						payment = new Cash();
+					System.out.println("Tranasaction id: "+ctrl.payService(cs, c1, c2).getTid());
+			
 
-					} else {
-						payment = new Wallet();
-
-					}
-
-					t = payment.Pay(t);
-					payment = new OverallDiscounts(payment);
-					t = payment.Pay(t);
-					payment = new SpecificDiscount(payment);
-					t = payment.Pay(t);
-					System.out.println("Final value: " + t.getAmount());
 					// ------------------------ 6
 					// -----------------------------------------------------------------------
 

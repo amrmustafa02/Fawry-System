@@ -3,12 +3,12 @@ package abstractFactory;
 public class VodafoneFactory implements ServiceProviderFactory {
 
 	@Override
-	public MobileService createMobileService(int type) {
+	public MobileService createMobileService() {
 		return new VodafoneMobileService();
 	}
 
 	@Override
-	public InternetService createInternetService(int type) {
+	public InternetService createInternetService() {
 		return new VodafoneInternetService();
 
 	}

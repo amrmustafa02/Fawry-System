@@ -2,7 +2,7 @@ package abstractFactory;
 
 public interface ServiceProviderFactory {
 
-	MobileService createMobileService(int type);
+	MobileService createMobileService();
 
-	InternetService createInternetService(int type);
+	InternetService createInternetService();
 }

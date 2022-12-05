@@ -39,7 +39,7 @@ public class OrangeMobileService implements MobileService {
 				System.out.println("Wrong number ,please try again");
 			} else {
 				System.out.println("correct number");
-				T.setAmount(amount);
+				T.setAmount(options.get(amount));
 			}
 
 		} catch (Exception e) {
