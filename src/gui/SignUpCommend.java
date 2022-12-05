@@ -2,7 +2,7 @@ package gui;
 
 import java.util.Scanner;
 
-import controllers.EnterToSystem;
+import controllers.RegisterToSystemController;
 
 public class SignUpCommend implements ICommend {
 
@@ -10,7 +10,7 @@ public class SignUpCommend implements ICommend {
 	String userName, email, password;
 	
 	// control
-	EnterToSystem controller = new EnterToSystem();
+	RegisterToSystemController controller = new RegisterToSystemController();
 
 	@Override
 	public void draw() {

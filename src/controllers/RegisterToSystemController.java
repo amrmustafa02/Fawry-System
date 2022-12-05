@@ -5,7 +5,7 @@ import java.util.Vector;
 import database.DataBase;
 import database.User;
 
-public class EnterToSystem {
+public class RegisterToSystemController {
 
 	private DataBase db = DataBase.getInstance();
 

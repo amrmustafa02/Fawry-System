@@ -2,12 +2,12 @@ package gui;
 
 import java.util.Scanner;
 
-import controllers.EnterToSystem;
+import controllers.RegisterToSystemController;
 
 public class SignInCommend implements ICommend {
 	Scanner sc = new Scanner(System.in);
 	String password, email;
-	EnterToSystem contoller = new EnterToSystem();
+	RegisterToSystemController contoller = new RegisterToSystemController();
 
 	@Override
 	public void draw() {
