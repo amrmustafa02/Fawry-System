@@ -19,7 +19,7 @@ public class AdminCtrl {
     }
 
     @GetMapping(value = "/showMyRefundAdmin")
-    public ArrayList<Transaction> showMyRefundTransactions() {
+    public ArrayList<Transaction> showRefundRequest() {
         return db.getRefundRequests();
     }
 
@@ -54,7 +54,6 @@ public class AdminCtrl {
     @GetMapping(value = "/showAllServices")
     public ArrayList<ServiceData> showServiceData() {
         return db.getServices();
-
     }
 
     @PostMapping(value = "/addOverallDiscount")

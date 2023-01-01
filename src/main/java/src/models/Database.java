@@ -123,7 +123,6 @@ public class Database {
         refundRequests.add(t);
     }
 
-
     public void addOverAllDiscount(int discount) {
         this.overAllDiscounts = discount;
     }

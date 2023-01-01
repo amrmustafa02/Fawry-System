@@ -14,6 +14,7 @@ import src.models.User;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 import src.payment.Cash;
 import src.payment.CreditCard;
@@ -75,19 +76,29 @@ public class UserCtrl {
         ArrayList<ServiceData> outPut = new ArrayList<>();
 
         for (ServiceData serviceData : db.getServices()) {
-            if (isMatching(serviceName, serviceData.getName())) {
+
+            if (isMatching(serviceName.toLowerCase(), serviceData.getName().toLowerCase()))
                 outPut.add(serviceData);
-            }
 
         }
 
         return outPut;
     }
 
+
+
+
+
+
+
+
+
+
     @GetMapping(value = "/service/{serviceId}")
     public ArrayList<String> getServiceForm(@PathVariable("serviceId") int id) {
         return db.getForm(id);
     }
+
 
     @PostMapping(value = "/payService")
     public String payService(@RequestBody ArrayList<String> inputs) {
@@ -177,6 +188,14 @@ public class UserCtrl {
 
         return "Transaction successfully, id of transaction is:  " + newTransaction.getTid();
     }
+
+
+
+
+
+
+
+
 
 
     @PostMapping(value = "/addToWallet")
